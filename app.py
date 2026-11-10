@@ -1,14 +1,18 @@
 import pandas as pd
+import streamlit as st
 
 df = pd.read_csv("data/exoplanetas.csv", comment="#")
 print(df.shape)
 print(df.head())
 print(df.isna().sum())
 
-INÍCIO
+
+
+
 
 ##1. CONFIGURAR A PÁGINA
  #  definir título e layout da página
+st.set_page_config(page_title="Exoplanetas", page_icon="🪐", layout="wide")
 
 #2. CARREGAR OS DADOS
   # ler data/exoplanetas.csv (ignorando as linhas de comentário)
